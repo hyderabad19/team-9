@@ -1,17 +1,22 @@
-<form action="http://localhost:5000/login" method="POST">
-        
-            
-            
-            
-                    login:id
-                    <input type="text" name="userid" id="userid">
-                
-                    password
-                    <input type="password" name="password" id="password">
-                
-                    <input type="submit" value="login">
-                    
-            </tbody>
-        
+<html>
+<head>
+    <link rel="stylesheet" href="main.css"/>
+<div class="login">
+  <h1>Login to Web APP</h1>
+  <form method="post" action="login.php">
+    <p><input type="text" name="logid" id="logid" value="" placeholder="Username or Email"></p>
+    <p><input type="password" name="password" id="password" value="" placeholder="Password"></p>
+    <p class="remember_me">
+      <label>
+        <input type="checkbox" name="remember_me" id="remember_me">
+        Remember me on this computer
+      </label>
+    </p>
+    <p class="submit"><input type="submit" name="commit" value="Login"></p>
+  </form>
+</div>
 
-    </form>
+<div class="login-help">
+  <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
+</div>
+</head>
