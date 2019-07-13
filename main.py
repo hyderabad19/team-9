@@ -7,6 +7,10 @@ conn = sql.connect('database.db')
 @app.route('/loginpage')
 def loginpage():
     return render_template('login.html')
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
 @app.route('/login',methods=['GET', 'POST'])
 def loginverify():
     if request.method == 'POST':
@@ -19,10 +23,10 @@ def loginverify():
           print(rows)
           for r in rows:
               if b==r[0]:
-                 return render_template('index.html')
+                 return redirect(url_for('index'))
               else:
-                 return render_template('login.html')
-    return render_template('login.html')
+                 return redirect(url_for('loginpage'))
+    return redirect(url_for('loginpage'))
 if __name__ == "__main__":
    
    app.run(debug = True)     
