@@ -1,7 +1,8 @@
 body {
   font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
   color: #404040;
-  background: #0ca3d2;
+  background: "book.jpg";
+  background-size: 100% 100%;
 }
 
 .login {
@@ -78,6 +79,13 @@ body {
 
 .login p.submit {
   text-align: right;
+}
+.login p.reset{
+    text-align: right;
+
+}
+.login p.Update{
+    text-align: right;
 }
 
 .login-help {
@@ -158,7 +166,7 @@ textarea:focus{
 
 }
 
-input[type=submit] {
+input[type=submit], input[type=Update] {
   padding: 0 18px;
   height: 29px;
   font-size: 12px;
@@ -182,7 +190,7 @@ input[type=submit] {
 align-items: center;
 }
 
-input[type=submit]:active {
+input[type=submit]:active, input[type=Update]:active {
   background: #cde5ef;
   border-color: #9eb9c2 #b3c0c8 #b4ccce;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
