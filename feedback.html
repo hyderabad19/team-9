@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>feedback Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+<div class="container">
+<h1> Feedback</h1>
+<form id="form1" name="form1" method="post" action="">
+
+<div class="form-group">
+First Name:
+<input type="text" name="text1" size="25" /><br><br>
+    </div>
+<div class="form-group">
+contact:
+ <input type="text" name="text2" size="25" /><br><br>
+    </div>
+    <div class="form-group">
+Need for training in new technologies: 
+<input type="radio" name="yes" value="yes">yes
+<input type="radio" name="no" value="no">no<br><br>
+    </div>
+        <div class="form-group">
+        
+Select State:
+<select name="state">
+<option value="AP">Andhra Pradesh
+<option value="TS">Telangana
+<option value="Gujarath">Gujarath
+</select><br><br>
+            </div>
+            <div class="form-group">
+Give your comment/about:
+<textarea name="comment/about" rows=5 columns=25></textarea><br><br>
+                </div>
+                <div class="form-group">
+Select a file to upload:
+<input type="file" name="f1" ><br><br>
+<input type="submit" name="submit" value="submit"/>
+<input type="reset" name="submit1" value="reset"/>
+                </div>
+</form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
+<script>  
+ $(document).ready(function(){  
+      $('#submit').click(function(){  
+           var v1 = $('#text1').val();  
+           var v2 = $('#text2').val(); 
+           var v3 = $('yes').val(); 
+          var v4 = $('no').val(); 
+          var v5 = $('state').val(); 
+          var v6 = $('comment/about').val();
+          var v7 = $('submit').val(); 
+          var v8 = $('submit1').val(); 
+           if(v1 == '' || v2 == '')  
+           {  
+                $('#error_message').html("All Fields are required");  
+           }  
+           else  
+           {  
+                $('#error_message').html('');  
+                $.ajax({  
+                     url:"insert.php",  
+                     method:"POST",  
+                     data:{name:name, message:message},  
+                     success:function(data){  
+                          $("form").trigger("reset");  
+                          $('#success_message').fadeIn().html(data);  
+                          setTimeout(function(){  
+                               $('#success_message').fadeOut("Slow");  
+                          }, 2000);  
+                     }  
+                });  
+           }  
+      });  
+ });  
+ </script>  
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
